@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background: linear-gradient(135deg, #003d79, #007b8d, #00bda8);
+  background-size: 200% 1%;
+  animation: metallicEffect 10s ease infinite;
+
+@keyframes metallicEffect {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+}
