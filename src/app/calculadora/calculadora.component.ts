@@ -10,68 +10,68 @@ import { Component } from '@angular/core';
 export class CalculadoraComponent {
 
   display: string = '';
-  currentOperand: string = '';
-  previousOperand: string = '';
-  operation: string | null = null;
+  primeiro: string = '';
+  segundo: string = '';
+  operacao: string | null = null;
 
-  appendNumber(number: string) {
-    if (number === '.' && this.currentOperand.includes('.')) return;
-    this.currentOperand = this.currentOperand.toString() + number;
-    this.updateDisplay();
+  adicionarNumero(number: string) {
+    if (number === '.' && this.segundo.includes('.')) return;
+    this.segundo = this.segundo.toString() + number;
+    this.atualizarDisplay();
   }
 
   clear() {
-    this.currentOperand = '';
-    this.previousOperand = '';
-    this.operation = null;
-    this.updateDisplay();
+    this.segundo = '';
+    this.primeiro = '';
+    this.operacao = null;
+    this.atualizarDisplay();
   }
 
-  chooseOperation(operation: string) {
-    if (this.currentOperand === '') return;
-    if (this.previousOperand !== '') {
-      this.compute();
+  tipoOperacao(lll: string) {
+    if (this.segundo === '') return;
+    if (this.primeiro !== '') {
+      this.calcular();
     }
-    this.operation = operation;
-    this.previousOperand = this.currentOperand;
-    this.currentOperand = '';
+    this.operacao = lll;
+    this.primeiro = this.segundo;
+    this.segundo = '';
   }
 
-  compute() {
+  calcular() {
     let result: number;
-    const prev = parseFloat(this.previousOperand);
-    const current = parseFloat(this.currentOperand);
-    if (isNaN(prev) || isNaN(current)) return;
+    const primeiro_convertido = parseFloat(this.primeiro);
+    const segundo_convertido = parseFloat(this.segundo);
+    if (isNaN(primeiro_convertido) || isNaN(segundo_convertido)) return;
 
-    switch (this.operation) {
+    switch (this.operacao) {
       case '+':
-        result = prev + current;
+        result = primeiro_convertido + segundo_convertido;
         break;
       case '-':
-        result = prev - current;
+        result = primeiro_convertido - segundo_convertido;
         break;
       case '*':
-        result = prev * current;
+        result = primeiro_convertido * segundo_convertido;
         break;
       case '/':
-        result = prev / current;
+        result = primeiro_convertido / segundo_convertido;
         break;
       default:
         return;
     }
 
-    this.currentOperand = result.toString();
-    this.operation = null;
-    this.previousOperand = '';
-    this.updateDisplay();
+    this.segundo = result.toString();
+    this.operacao = null;
+    this.primeiro = '';
+    this.atualizarDisplay();
   }
 
-  appendDecimal() {
-    this.appendNumber('.');
+  decimal() {
+    this.adicionarNumero('.');
   }
 
-  updateDisplay() {
-    this.display = this.currentOperand || this.previousOperand;
+  atualizarDisplay() {
+    this.display = this.segundo || this.primeiro;
   }
 
 }

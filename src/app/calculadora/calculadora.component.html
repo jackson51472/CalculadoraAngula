@@ -3,23 +3,23 @@
 
   <!-- Botões da calculadora -->
   <button class="clear" (click)="clear()">C</button>
-  <button (click)="appendNumber('1')">1</button>
-  <button (click)="appendNumber('2')">2</button>
-  <button (click)="appendNumber('3')">3</button>
-  <button class="operator" (click)="chooseOperation('/')">/</button>
+  <button (click)="adicionarNumero('1')">1</button>
+  <button (click)="adicionarNumero('2')">2</button>
+  <button (click)="adicionarNumero('3')">3</button>
+  <button class="operator" (click)="tipoOperacao('/')">/</button>
 
-  <button (click)="appendNumber('4')">4</button>
-  <button (click)="appendNumber('5')">5</button>
-  <button (click)="appendNumber('6')">6</button>
-  <button class="operator" (click)="chooseOperation('*')">x</button>
+  <button (click)="adicionarNumero('4')">4</button>
+  <button (click)="adicionarNumero('5')">5</button>
+  <button (click)="adicionarNumero('6')">6</button>
+  <button class="operator" (click)="tipoOperacao('*')">x</button>
 
-  <button (click)="appendNumber('7')">7</button>
-  <button (click)="appendNumber('8')">8</button>
-  <button (click)="appendNumber('9')">9</button>
-  <button class="operator" (click)="chooseOperation('-')">-</button>
+  <button (click)="adicionarNumero('7')">7</button>
+  <button (click)="adicionarNumero('8')">8</button>
+  <button (click)="adicionarNumero('9')">9</button>
+  <button class="operator" (click)="tipoOperacao('-')">-</button>
 
-  <button (click)="appendNumber('0')">0</button>
-  <button (click)="appendDecimal()">.</button>
-  <button class="equal" (click)="compute()">=</button>
-  <button class="operator" (click)="chooseOperation('+')">+</button>
+  <button (click)="adicionarNumero('0')">0</button>
+  <button (click)="decimal()">.</button>
+  <button class="equal" (click)="calcular()">=</button>
+  <button class="operator" (click)="tipoOperacao('+')">+</button>
 </div>
