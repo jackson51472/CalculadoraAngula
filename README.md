@@ -1,27 +1,33 @@
-# Untitled
+# Calculadora Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+Este projeto é uma calculadora simples desenvolvida com Angular. A calculadora suporta operações básicas como adição, subtração, multiplicação e divisão. O layout foi criado utilizando HTML e CSS, e a lógica da calculadora foi implementada em TypeScript.
 
-## Development server
+## Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Adição (`+`)
+- Subtração (`-`)
+- Multiplicação (`*`)
+- Divisão (`/`)
+- Limpar valores (`C`)
+- Operações com números decimais
 
-## Code scaffolding
+## Estrutura do Projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O projeto consiste nos seguintes arquivos principais:
 
-## Build
+- `calculator.component.ts`: Contém a lógica da calculadora.
+- `calculator.component.html`: Estrutura do layout da calculadora.
+- `calculator.component.css`: Estilos da calculadora.
+- `app.module.ts`: Configuração do módulo Angular, onde o componente da calculadora é importado.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Pré-requisitos
 
-## Running unit tests
+Antes de rodar o projeto, certifique-se de ter os seguintes softwares instalados:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Node.js** (versão 16 ou superior)
+- **Angular CLI** (versão 12 ou superior)
 
-## Running end-to-end tests
+Você pode instalar o Angular CLI com o seguinte comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm install -g @angular/cli
