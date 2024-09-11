@@ -6,7 +6,7 @@ Este projeto é uma calculadora simples desenvolvida com Angular. A calculadora 
 
 - Adição (`+`)
 - Subtração (`-`)
-- Multiplicação (`*`)
+- Multiplicação (`x`)
 - Divisão (`/`)
 - Limpar valores (`C`)
 - Operações com números decimais
